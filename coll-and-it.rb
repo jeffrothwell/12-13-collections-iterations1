@@ -73,16 +73,61 @@ names_ages = {Jeff: 33, Moya: 29, Adam: 32, Dan: 31}
 
 #exercise 6
 
-movies_by_years = {1999 => ["The Matrix", "Star Wars: Ep 1", "The Mummy"],
-2009 => ["Avatar", "Star Trek", "District 9"],
-2019 => ["How to Train Your Dragon 3", "Toy Story 4", "Star Wars: Ep 9"]
-}
-puts movies_by_years
-
-phone_rows = [[1,2,3],[4,5,6],[7,8,9],["*",0,"#"]]
-puts phone_rows
-
+# movies_by_years = {1999 => ["The Matrix", "Star Wars: Ep 1", "The Mummy"],
+# 2009 => ["Avatar", "Star Trek", "District 9"],
+# 2019 => ["How to Train Your Dragon 3", "Toy Story 4", "Star Wars: Ep 9"]
+# }
+# puts movies_by_years
+#
+# phone_rows = [[1,2,3],[4,5,6],[7,8,9],["*",0,"#"]]
+# puts phone_rows
+#
 countries = [{name: "Germany", continent: "Europe", island: false},
 {name: "Madagascar", continent: "Africa", island: true},
 {name: "Azerbaijan", continent: "Asia?", island: false}]
+
+#exercise 7
+# 20.times do
+#   puts "I will not skateboard in the halls"
+# end
+#
+# detention = Array.new(20, "I will not skateboard in the halls")
+#
+# one_to_fify = (1..50).to_a
+#
+# sum = 0
+# one_to_fify.each { |num| sum += num }
+# puts sum
+
+#the above can also be done in one line like this:
+# puts one_to_fify.reduce(:+)
+
+#making an array of numbers one to fifty 3 times each number,
+#the following did not work
+# three_one_to_fifty = []
+# i = 1
+# 50.times do
+#   3.times do
+#     three_one_to_fifty >> i
+#   end
+#   i += 1
+# end
+# print three_one_to_fifty
+
+#this works, and I used print to make it come out more readable
+#print "#{(one_to_fify * 3).sort}\n"
+
+non_islands = countries.select { |country| country[:island] == false }
+
+# at this point we have an array of hashes called "non_islands"
+# in which each element is a hash, but say I wanted an Array
+#containing just the names of the countries that aren't islands
+
+non_islands_coutries = [] #initiate empty array to store the country names
+
+non_islands.each do |country|
+  non_islands_coutries << country[:name]
+end
+puts non_islands_coutries
+puts non_islands
 puts countries
