@@ -10,7 +10,7 @@ word_defs = {finite: "a number with a defined value in the real number set",
 }
 fav_movies = {Pulp_Fiction: 1994, Rushmore: 1998, Raising_Arizona: 1987}
 cities = {Toronto: 2809000, London: 8788000, Mumbai: 18410000}
-names_ages = {Jeff: 33, Moya: 29, Adam: 32, Dan: 33}
+names_ages = {Jeff: 33, Moya: 29, Adam: 32, Dan: 31}
 
 #exercise 1
 
@@ -42,14 +42,31 @@ names_ages = {Jeff: 33, Moya: 29, Adam: 32, Dan: 33}
 
 #exercise 4
 
-ages.each do |age|
+# ages.each do |age|
+#   if age < 32
+#     puts age
+#   end
+# end
+# puts "The max age in my array is #{ages.max}"
+# puts "Heads was flipped #{coin_flips.count("heads")} times"
+# fav_artists.delete("Umphrey's McGee")
+# puts fav_artists
+# cities[:Toronto] = 3900000
+# puts cities
+
+#exercise 5
+
+puts "Total polulation of my cities is #{cities.values.sum}"
+
+names_ages.each do |name, age|
   if age < 32
-    puts age
+    puts "#{name} is young."
+  else
+    puts "#{name} is old."
   end
 end
-puts "The max age in my array is #{ages.max}"
-puts "Heads was flipped #{coin_flips.count("heads")} times"
-fav_artists.delete("Umphrey's McGee")
-puts fav_artists
-cities[:Toronto] = 3900000
-puts cities
+
+ages.map { |age| puts age + 1 }
+
+fav_colours.push("yellow", "pink")
+puts fav_colours
