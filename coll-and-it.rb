@@ -14,9 +14,18 @@ names_ages = {Jeff: 33, Moya: 29, Adam: 32, Dan: 33}
 
 #exercise 1
 
-puts coin_flips
-puts fav_colours[0]
-puts ages.sort
-ages << 0
-puts ages
-puts "Rushmore was released in #{fav_movies[:Rushmore]}"
+# puts coin_flips
+# puts fav_colours[0]
+# puts ages.sort
+# ages << 0
+# puts ages
+# puts "Rushmore was released in #{fav_movies[:Rushmore]}"
+
+#exercise 2
+
+puts fav_colours[-1]
+cities[:Tokyo] = 9273000
+puts cities[:Mumbai]
+fav_artists.each do |band|
+  puts "I think #{band} is great"
+end
