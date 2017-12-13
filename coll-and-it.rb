@@ -23,9 +23,19 @@ names_ages = {Jeff: 33, Moya: 29, Adam: 32, Dan: 33}
 
 #exercise 2
 
-puts fav_colours[-1]
-cities[:Tokyo] = 9273000
-puts cities[:Mumbai]
-fav_artists.each do |band|
-  puts "I think #{band} is great"
+# puts fav_colours[-1]
+# cities[:Tokyo] = 9273000
+# puts cities[:Mumbai]
+# fav_artists.each do |band|
+#   puts "I think #{band} is great"
+# end
+
+#exercise 3
+
+puts fav_artists[0..1]
+fav_movies.each do |movie, year|
+  puts "#{movie} came out in #{year}"
 end
+reverse_sorted_ages = ages.sort.reverse
+puts reverse_sorted_ages
+fav_movies[:Beauty_and_the_Beast] = [1991, 2017]
