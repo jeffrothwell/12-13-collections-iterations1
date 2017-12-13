@@ -56,17 +56,33 @@ names_ages = {Jeff: 33, Moya: 29, Adam: 32, Dan: 31}
 
 #exercise 5
 
-puts "Total polulation of my cities is #{cities.values.sum}"
+# puts "Total polulation of my cities is #{cities.values.sum}"
+#
+# names_ages.each do |name, age|
+#   if age < 32
+#     puts "#{name} is young."
+#   else
+#     puts "#{name} is old."
+#   end
+# end
+#
+# ages.map { |age| puts age + 1 }
+#
+# fav_colours.push("yellow", "pink")
+# puts fav_colours
 
-names_ages.each do |name, age|
-  if age < 32
-    puts "#{name} is young."
-  else
-    puts "#{name} is old."
-  end
-end
+#exercise 6
 
-ages.map { |age| puts age + 1 }
+movies_by_years = {1999 => ["The Matrix", "Star Wars: Ep 1", "The Mummy"],
+2009 => ["Avatar", "Star Trek", "District 9"],
+2019 => ["How to Train Your Dragon 3", "Toy Story 4", "Star Wars: Ep 9"]
+}
+puts movies_by_years
 
-fav_colours.push("yellow", "pink")
-puts fav_colours
+phone_rows = [[1,2,3],[4,5,6],[7,8,9],["*",0,"#"]]
+puts phone_rows
+
+countries = [{name: "Germany", continent: "Europe", island: false},
+{name: "Madagascar", continent: "Africa", island: true},
+{name: "Azerbaijan", continent: "Asia?", island: false}]
+puts countries
