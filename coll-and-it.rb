@@ -32,10 +32,24 @@ names_ages = {Jeff: 33, Moya: 29, Adam: 32, Dan: 33}
 
 #exercise 3
 
-puts fav_artists[0..1]
-fav_movies.each do |movie, year|
-  puts "#{movie} came out in #{year}"
+# puts fav_artists[0..1]
+# fav_movies.each do |movie, year|
+#   puts "#{movie} came out in #{year}"
+# end
+# reverse_sorted_ages = ages.sort.reverse
+# puts reverse_sorted_ages
+# fav_movies[:Beauty_and_the_Beast] = [1991, 2017]
+
+#exercise 4
+
+ages.each do |age|
+  if age < 32
+    puts age
+  end
 end
-reverse_sorted_ages = ages.sort.reverse
-puts reverse_sorted_ages
-fav_movies[:Beauty_and_the_Beast] = [1991, 2017]
+puts "The max age in my array is #{ages.max}"
+puts "Heads was flipped #{coin_flips.count("heads")} times"
+fav_artists.delete("Umphrey's McGee")
+puts fav_artists
+cities[:Toronto] = 3900000
+puts cities
