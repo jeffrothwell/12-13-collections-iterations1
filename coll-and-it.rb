@@ -12,111 +12,115 @@ fav_movies = {Pulp_Fiction: 1994, Rushmore: 1998, Raising_Arizona: 1987}
 cities = {Toronto: 2809000, London: 8788000, Mumbai: 18410000}
 names_ages = {Jeff: 33, Moya: 29, Adam: 32, Dan: 31}
 
-#exercise 1
+##    exercise 1
 
-# puts coin_flips
-# puts fav_colours[0]
-# puts ages.sort
-# ages << 0
-# puts ages
-# puts "Rushmore was released in #{fav_movies[:Rushmore]}"
+puts coin_flips
+puts fav_colours[0]
+puts ages.sort
+ages << 0
+puts "Rushmore was released in #{fav_movies[:Rushmore]}"
 
-#exercise 2
+##    exercise 2
 
-# puts fav_colours[-1]
-# cities[:Tokyo] = 9273000
-# puts cities[:Mumbai]
-# fav_artists.each do |band|
-#   puts "I think #{band} is great"
-# end
+puts fav_colours[-1]
 
-#exercise 3
+cities[:Tokyo] = 9273000
 
-# puts fav_artists[0..1]
-# fav_movies.each do |movie, year|
-#   puts "#{movie} came out in #{year}"
-# end
-# reverse_sorted_ages = ages.sort.reverse
-# puts reverse_sorted_ages
-# fav_movies[:Beauty_and_the_Beast] = [1991, 2017]
+puts cities[:Mumbai]
 
-#exercise 4
+fav_artists.each do |band|
+  puts "I think #{band} is great"
+end
 
-# ages.each do |age|
-#   if age < 32
-#     puts age
-#   end
-# end
-# puts "The max age in my array is #{ages.max}"
-# puts "Heads was flipped #{coin_flips.count("heads")} times"
-# fav_artists.delete("Umphrey's McGee")
-# puts fav_artists
-# cities[:Toronto] = 3900000
-# puts cities
+##     exercise 3
 
-#exercise 5
+puts fav_artists[0..1]
 
-# puts "Total polulation of my cities is #{cities.values.sum}"
-#
-# names_ages.each do |name, age|
-#   if age < 32
-#     puts "#{name} is young."
-#   else
-#     puts "#{name} is old."
-#   end
-# end
-#
-# ages.map { |age| puts age + 1 }
-#
-# fav_colours.push("yellow", "pink")
-# puts fav_colours
+fav_movies.each do |movie, year|
+  puts "#{movie} came out in #{year}"
+end
 
-#exercise 6
+reverse_sorted_ages = ages.sort.reverse
+puts reverse_sorted_ages
 
-# movies_by_years = {1999 => ["The Matrix", "Star Wars: Ep 1", "The Mummy"],
-# 2009 => ["Avatar", "Star Trek", "District 9"],
-# 2019 => ["How to Train Your Dragon 3", "Toy Story 4", "Star Wars: Ep 9"]
-# }
-# puts movies_by_years
-#
-# phone_rows = [[1,2,3],[4,5,6],[7,8,9],["*",0,"#"]]
-# puts phone_rows
-#
+fav_movies[:Beauty_and_the_Beast] = [1991, 2017]
+
+#    exercise 4
+
+ages.each do |age|
+  if age < 32
+    puts age
+  end
+end
+
+puts "The max age in my array is #{ages.max}"
+
+coin_flips.count("heads")
+
+fav_artists.delete("Umphrey's McGee")
+
+cities[:Toronto] = 3900000
+
+##    exercise 5
+
+cities.values.sum
+
+names_ages.each do |name, age|
+  if age < 32
+    puts "#{name} is young."
+  else
+    puts "#{name} is old."
+  end
+end
+
+ages.map { |age| puts age + 1 }
+
+fav_colours.push("yellow", "pink")
+
+#    exercise 6
+
+movies_by_years = {1999 => ["The Matrix", "Star Wars: Ep 1", "The Mummy"],
+2009 => ["Avatar", "Star Trek", "District 9"],
+2019 => ["How to Train Your Dragon 3", "Toy Story 4", "Star Wars: Ep 9"]
+}
+
+phone_rows = [[1,2,3],[4,5,6],[7,8,9],["*",0,"#"]]
+
 countries = [{name: "Germany", continent: "Europe", island: false},
 {name: "Madagascar", continent: "Africa", island: true},
 {name: "Azerbaijan", continent: "Asia?", island: false}]
 
-#exercise 7
-# 20.times do
-#   puts "I will not skateboard in the halls"
-# end
-#
-# detention = Array.new(20, "I will not skateboard in the halls")
-#
-# one_to_fify = (1..50).to_a
-#
-# sum = 0
-# one_to_fify.each { |num| sum += num }
-# puts sum
+#     exercise 7
+20.times do
+  puts "I will not skateboard in the halls"
+end
+
+detention = Array.new(20, "I will not skateboard in the halls")
+
+one_to_fify = (1..50).to_a
+
+sum = 0
+one_to_fify.each { |num| sum += num }
+
 
 #the above can also be done in one line like this:
-# puts one_to_fify.reduce(:+)
+one_to_fify.reduce(:+)
 
 #making an array of numbers one to fifty 3 times each number,
-#the following did not work
-# three_one_to_fifty = []
-# i = 1
-# 50.times do
-#   3.times do
-#     three_one_to_fifty >> i
-#   end
-#   i += 1
-# end
-# print three_one_to_fifty
+#here's one way to do it:
+three_one_to_fifty = []
+i = 1
+50.times do
+  3.times do
+    three_one_to_fifty << i
+  end
+  i += 1
+end
 
-#this works, and I used print to make it come out more readable
-#print "#{(one_to_fify * 3).sort}\n"
+#and here's another, much more simple
+three_one_to_fifty = (one_to_fify*3).sort
 
+# use select method here to get all non-island hashes
 non_islands = countries.select { |country| country[:island] == false }
 
 # at this point we have an array of hashes called "non_islands"
@@ -128,6 +132,19 @@ non_islands_coutries = [] #initiate empty array to store the country names
 non_islands.each do |country|
   non_islands_coutries << country[:name]
 end
-puts non_islands_coutries
-puts non_islands
-puts countries
+# non_islands_coutries is now a simple array with only the country names
+
+#    exercise 8
+def expense_sum(expenses)
+  expenses.sum
+end
+#this hardly seems worth putting in a method
+#I think the question wanted an each iteration
+#define sum = 0 outside the code block,
+#then add each element with the iteration
+
+expenses1 = [245, 65.34, 9654, 874.3]
+expenses2 = [536, 2375.4, 974, 748]
+
+expense_sum(expenses1)
+expense_sum(expenses2)
